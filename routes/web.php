@@ -6,14 +6,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/blog', function () {
-    return view('blog');
+    return view('blog',['title'=>'Blog']);
 });
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contact',['title'=>'Contact']);
 });
 Route::get('/home', function () {
-    return view('home');
+    return view('home',['title'=>'Home']);
 });
 Route::get('/about', function () {
-    return view('about');
+    return view('about',['title'=>'About','name'=>'babi']);
 });

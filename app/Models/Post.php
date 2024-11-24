@@ -32,14 +32,15 @@ a rem, assumenda minima? Reprehenderit consequuntur'
             ],
         ];
     }
-    public static function find($slug) : array
+
+    public static function find($slug): array
     {
         // $posts = static::all();
         // return  Arr::first(static::all(), function ($post) use ($slug) {
         //     return $post['slug'] == $slug;
         // });
 
-        $post = Arr::first(static::all(), fn ($post) => $post['slug'] == $slug);
+        $post = Arr::first(static::all(), fn($post) => $post['slug'] == $slug);
 
         if (!$post) {
             abort(404);
